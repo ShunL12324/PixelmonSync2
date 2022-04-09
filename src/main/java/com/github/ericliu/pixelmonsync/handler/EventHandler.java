@@ -3,6 +3,7 @@ package com.github.ericliu.pixelmonsync.handler;
 import com.github.ericliu.pixelmonsync.Pixelmonsync;
 import com.github.ericliu.pixelmonsync.config.ConfigLoader;
 import com.github.ericliu.pixelmonsync.config.PConfig;
+import com.github.ericliu.pixelmonsync.pref.Reference;
 import org.spongepowered.api.Sponge;
 import org.spongepowered.api.entity.living.player.Player;
 import org.spongepowered.api.event.Listener;
@@ -30,14 +31,16 @@ public class EventHandler {
 
     @Listener(order = Order.PRE)
     public void onLeave(ClientConnectionEvent.Disconnect event, @Getter("getTargetEntity")Player player){
-        if (player.hasPermission("pixelmonsync.base")){
+        if (player.hasPermission(Reference.PERM_NODE_BASE)){
             SyncHandler.instance.save(player);
         }
     }
 
     @Listener(order = Order.POST)
     public void onJoin(ClientConnectionEvent.Join event, @Getter("getTargetEntity")Player player){
-        if (!player.hasPermission("pixelmonsync.base")) return;
+        if (!player.hasPermission(Reference.PERM_NODE_BASE)) {
+            return;
+        }
         Task.builder()
                 .execute(()-> SyncHandler.instance.load(player))
                 .delay(config.delay, TimeUnit.MILLISECONDS)
