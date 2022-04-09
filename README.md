@@ -33,6 +33,8 @@ load a server's data from database(?)
 
 ## Permissions 
 
+`pixelmonsync.user.base` (Allow auto load/save when player join/leave)
+
 `pixelmonsync.admin.save`
 
 `pixelmonsync.admin.load`

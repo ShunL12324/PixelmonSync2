@@ -8,7 +8,7 @@ public class Reference {
     public static final String USER_NODE = "user";
     public static final String ADMIN_NODE = "admin";
 
-    public static final String PERM_NODE_BASE = PLUGIN_ID  + "." + ADMIN_NODE + ".base";
+    public static final String PERM_NODE_BASE = PLUGIN_ID  + "." + USER_NODE + ".base";
 
     public static final String PERM_NODE_LOAD = PLUGIN_ID + "." + ADMIN_NODE + ".load";
     public static final String PERM_NODE_SAVE = PLUGIN_ID + "." + ADMIN_NODE + ".save";
