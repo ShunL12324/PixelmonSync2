@@ -24,12 +24,12 @@ Load a player's data from database
 
 * `psycn server`
 
-Save a server's data to database(?)
+Use this command as the alternative of `server` command of BungeeCord, this command make sure the data has been fully saved before connecting the player to another sub-server  
 
 
 * `psycn migrate`
 
-load a server's data from database(?)
+If you are using PixelmonSync 1, you could use this command to migrate player data  
 
 ## Permissions 
 
