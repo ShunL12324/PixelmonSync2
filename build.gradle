@@ -22,11 +22,10 @@ tasks.withType(JavaCompile) {
 group = 'com.github.ericliu'
 version = '2.0'
 
-sourceCompatibility = '1.8'
-targetCompatibility = '1.8'
+sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8'
 
 minecraft {
-    mappings channel: 'snapshot', version: '20180814-1.12'
+    mappings channel: 'snapshot', version: '20171003-1.12'
     runs {
         client {
             workingDirectory project.file('run')
@@ -50,9 +49,9 @@ minecraft {
 }
 
 dependencies {
-    minecraft 'net.minecraftforge:forge:1.12.2-14.23.5.2855'
-    compile 'org.spongepowered:spongeforge:1.12.2-2838-7.3.0:dev'
-    compile(files('libs/Pixelmon-1.12.2-8.1.2-universal.jar'))
+    minecraft 'net.minecraftforge:forge:1.12.2-14.23.5.2860'
+    compile 'org.spongepowered:spongeforge:1.12.2-2838-7.4.7:dev'
+    compile(files('libs/Pixelmon-1.12.2-8.3.8-universal.jar'))
 }
 
 jar {

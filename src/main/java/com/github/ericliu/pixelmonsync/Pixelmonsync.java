@@ -7,6 +7,7 @@ import com.github.ericliu.pixelmonsync.handler.BCHandler;
 import com.github.ericliu.pixelmonsync.handler.DatabaseManger;
 import com.github.ericliu.pixelmonsync.handler.EventHandler;
 import com.github.ericliu.pixelmonsync.handler.SyncHandler;
+import com.github.ericliu.pixelmonsync.pref.Reference;
 import com.google.inject.Inject;
 import org.slf4j.Logger;
 import org.spongepowered.api.Sponge;
@@ -19,8 +20,8 @@ import org.spongepowered.api.plugin.Plugin;
 import java.io.File;
 
 @Plugin(
-        id = "pixelmonsync",
-        name = "Pixelmonsync"
+        id = Reference.PLUGIN_ID,
+        name = Reference.PLUGIN_NAME
 )
 public class Pixelmonsync {
 
