@@ -12,22 +12,22 @@ Database details can be specified in config files
 
 ## Commands 
 
-* `psycn save [<player>]`
+* `psync save [<player>]`
 
 Save a player's data to database that is specified in config. 
 
 Leave `[<player>]` blank to specify command user.
 
-* `psycn load [<player>]`
+* `psync load [<player>]`
 
 Load a player's data from database
 
-* `psycn server`
+* `psync server`
 
 Use this command as the alternative of `server` command of BungeeCord, this command make sure the data has been fully saved before connecting the player to another sub-server  
 
 
-* `psycn migrate`
+* `psync migrate`
 
 If you are using PixelmonSync 1, you could use this command to migrate player data  
 
